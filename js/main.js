@@ -1,5 +1,5 @@
 /* ===========================
-   Portfolio — Main JavaScript
+   Portfolio - Main JavaScript
    =========================== */
 
 document.addEventListener('DOMContentLoaded', () => {
