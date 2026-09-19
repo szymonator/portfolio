@@ -248,75 +248,8 @@
             </div>
           </details>
 
-          <!-- Card 2: Szymon's Movie Database -->
-          <details class="experience-card group bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
-            <summary class="flex items-start justify-between p-6 sm:p-8 cursor-pointer select-none">
-              <div class="flex-1 min-w-0 pr-4">
-                <div class="flex items-center gap-3 mb-2 flex-wrap">
-                  <h3 class="text-slate-900 dark:text-slate-50">Szymon's Movie Database</h3>
-                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 border border-orange-200 dark:border-orange-800">Java Coursework</span>
-                </div>
-                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed max-w-prose">
-                  A high-performance in-memory movie query system and database engine built from scratch in Java, featuring custom data structures and sub-millisecond execution.
-                </p>
-              </div>
-              <div class="flex flex-col items-end flex-shrink-0 gap-3">
-                <a href="https://github.com/szymonator/MovieDatabase" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();" class="p-2 rounded-lg text-slate-400 dark:text-slate-500 hover:text-orange-500 dark:hover:text-orange-400 hover:bg-orange-50 dark:hover:bg-orange-900/20 transition-colors" aria-label="View on GitHub" title="View on GitHub">
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                  </svg>
-                </a>
-                <div class="flex items-center text-sm text-orange-600 dark:text-orange-400">
-                  <span class="toggle-text">Show more</span>
-                  <svg class="chevron-icon w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-                </div>
-              </div>
-            </summary>
-            <div class="details-content">
-              <div class="px-6 sm:px-8 pb-6 pt-0">
-                <!-- Project Image Preview -->
-                <div class="mb-6 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm bg-slate-900">
-                  <img src="moviedb.jpg" alt="Szymon's Movie Database UI preview" class="w-full h-auto object-cover max-h-96 hover:scale-[1.01] transition-transform duration-300" loading="lazy" decoding="async">
-                </div>
 
-                <div class="border-t border-slate-100 dark:border-slate-700/80 pt-4 mb-5">
-                  <h4 class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3">Technical Highlights</h4>
-                  <ul class="space-y-2.5 text-sm text-slate-600 dark:text-slate-400">
-                    <li class="flex items-start">
-                      <span class="text-orange-400 dark:text-orange-500 mr-3 mt-1 flex-shrink-0">•</span>
-                      <span><strong>Custom Data Structures from Scratch:</strong> Implemented generic collections without standard library wrappers, including a dynamically resizing hash map with collision chaining (0.75 load factor threshold for average O(1) retrieval), a self-balancing AVL tree, and a singly linked list.</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-orange-400 dark:text-orange-500 mr-3 mt-1 flex-shrink-0">•</span>
-                      <span><strong>Algorithmic Optimisation:</strong> Engineered a generic Quicksort using Lomuto partitioning and a median-of-three pivot selection to secure reliable O(n log n) sorting performance and prevent worst-case degeneration.</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-orange-400 dark:text-orange-500 mr-3 mt-1 flex-shrink-0">•</span>
-                      <span><strong>Fast Range &amp; Filter Queries:</strong> Leveraged strictly balanced AVL trees (height deviance &plusmn;1) to power complex range queries (e.g. filtering films by release period) in O(log n + k) time.</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-orange-400 dark:text-orange-500 mr-3 mt-1 flex-shrink-0">•</span>
-                      <span><strong>Multi-Indexed Database Engine:</strong> Structured unified indices across Movies, Cast/Crew Credits, and User Ratings, combining tree and hash lookups to support instant cross-referencing by title, credit IDs, keywords, and average ratings.</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-orange-400 dark:text-orange-500 mr-3 mt-1 flex-shrink-0">•</span>
-                      <span><strong>Benchmark Performance:</strong> Consistently recorded sub-millisecond query execution on a 1,000-movie collection (top average-rated query in 0.0475ms; date range filter in 0.0168ms).</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="flex flex-wrap gap-2 pt-1">
-                  <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Java</span>
-                  <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">AVL Trees</span>
-                  <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Hash Maps</span>
-                  <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Quicksort</span>
-                  <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Data Structures</span>
-                </div>
-              </div>
-            </div>
-          </details>
-
-          <!-- Card 3: Gesture Recognition Calculator -->
+          <!-- Card 2: Gesture Recognition Calculator -->
           <details class="experience-card group bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
             <summary class="flex items-start justify-between p-6 sm:p-8 cursor-pointer select-none">
               <div class="flex-1 min-w-0 pr-4">
@@ -387,67 +320,8 @@
             </div>
           </details>
 
-          <!-- Card 4: Robot Maze Solver -->
-          <details class="experience-card group bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
-            <summary class="flex items-start justify-between p-6 sm:p-8 cursor-pointer select-none">
-              <div class="flex-1 min-w-0 pr-4">
-                <div class="flex items-center gap-3 mb-2 flex-wrap">
-                  <h3 class="text-slate-900 dark:text-slate-50">Autonomous Maze-Solving Robot</h3>
-                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 border border-orange-200 dark:border-orange-800">Java Coursework</span>
-                </div>
-                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed max-w-prose">
-                  An intelligent autonomous maze-navigation controller featuring junction discovery, stateful backtracking, loop elimination, and optimal route replay.
-                </p>
-              </div>
-              <div class="flex flex-col items-end flex-shrink-0 gap-3">
-                <div class="flex items-center gap-2" onclick="event.stopPropagation();">
-                  <a href="https://github.com/szymonator/RobotMaze" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg text-slate-400 dark:text-slate-500 hover:text-orange-500 dark:hover:text-orange-400 hover:bg-orange-50 dark:hover:bg-orange-900/20 transition-colors" aria-label="View on GitHub" title="View on GitHub">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                  </a>
-                </div>
-                <div class="flex items-center text-sm text-orange-600 dark:text-orange-400">
-                  <span class="toggle-text">Show more</span>
-                  <svg class="chevron-icon w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-                </div>
-              </div>
-            </summary>
-            <div class="details-content">
-              <div class="px-6 sm:px-8 pb-6 pt-0">
-                <div class="border-t border-slate-100 dark:border-slate-700/80 pt-4 mb-5">
-                  <h4 class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3">Technical Highlights</h4>
-                  <ul class="space-y-2.5 text-sm text-slate-600 dark:text-slate-400">
-                    <li class="flex items-start">
-                      <span class="text-orange-400 dark:text-orange-500 mr-3 mt-1 flex-shrink-0">•</span>
-                      <span><strong>Stateful Exploration &amp; Tremaux-Style Backtracking:</strong> Built a finite-state controller that dynamically transitions between forward exploration and dead-end backtracking, maintaining junction visit frequencies to systematically solve unknown topologies.</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-orange-400 dark:text-orange-500 mr-3 mt-1 flex-shrink-0">•</span>
-                      <span><strong>Historical Junction Stack &amp; Loop Pruning:</strong> Designed custom data structures tracking coordinate history and heading vectors. When dead-ends or cyclic paths are detected, suboptimal branches are pruned from memory.</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-orange-400 dark:text-orange-500 mr-3 mt-1 flex-shrink-0">•</span>
-                      <span><strong>Optimal Route Execution:</strong> After mapping the maze on the initial discovery run, subsequent runs switch into optimal replay mode, guiding the robot to the exit with zero detours or redundant junction evaluations.</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-orange-400 dark:text-orange-500 mr-3 mt-1 flex-shrink-0">•</span>
-                      <span><strong>Robust Collision &amp; Corner Handling:</strong> Implemented lookahead checks for walls, passages, corridors, and cul-de-sacs to ensure collision-free steering under simulated sensor inputs.</span>
-                    </li>
-                  </ul>
-                </div>
 
-                <div class="flex flex-wrap gap-2 pt-1">
-                  <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Java</span>
-                  <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Pathfinding</span>
-                  <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Search Algorithms</span>
-                  <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Robotics Logic</span>
-                </div>
-              </div>
-            </div>
-          </details>
-
-          <!-- Card 5: λGPT Chatbot -->
+          <!-- Card 3: λGPT Chatbot -->
           <details class="experience-card group bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
             <summary class="flex items-start justify-between p-6 sm:p-8 cursor-pointer select-none">
               <div class="flex-1 min-w-0 pr-4">
@@ -512,6 +386,137 @@
             </div>
           </details>
 
+
+          <!-- Card 4: Szymon's Movie Database -->
+          <details class="experience-card group bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
+            <summary class="flex items-start justify-between p-6 sm:p-8 cursor-pointer select-none">
+              <div class="flex-1 min-w-0 pr-4">
+                <div class="flex items-center gap-3 mb-2 flex-wrap">
+                  <h3 class="text-slate-900 dark:text-slate-50">Szymon's Movie Database</h3>
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 border border-orange-200 dark:border-orange-800">Java Coursework</span>
+                </div>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed max-w-prose">
+                  A high-performance in-memory movie query system and database engine built from scratch in Java, featuring custom data structures and sub-millisecond execution.
+                </p>
+              </div>
+              <div class="flex flex-col items-end flex-shrink-0 gap-3">
+                <a href="https://github.com/szymonator/MovieDatabase" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();" class="p-2 rounded-lg text-slate-400 dark:text-slate-500 hover:text-orange-500 dark:hover:text-orange-400 hover:bg-orange-50 dark:hover:bg-orange-900/20 transition-colors" aria-label="View on GitHub" title="View on GitHub">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                </a>
+                <div class="flex items-center text-sm text-orange-600 dark:text-orange-400">
+                  <span class="toggle-text">Show more</span>
+                  <svg class="chevron-icon w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                </div>
+              </div>
+            </summary>
+            <div class="details-content">
+              <div class="px-6 sm:px-8 pb-6 pt-0">
+                <!-- Project Image Preview -->
+                <div class="mb-6 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm bg-slate-900">
+                  <img src="moviedb.jpg" alt="Szymon's Movie Database UI preview" class="w-full h-auto object-cover max-h-96 hover:scale-[1.01] transition-transform duration-300" loading="lazy" decoding="async">
+                </div>
+
+                <div class="border-t border-slate-100 dark:border-slate-700/80 pt-4 mb-5">
+                  <h4 class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3">Technical Highlights</h4>
+                  <ul class="space-y-2.5 text-sm text-slate-600 dark:text-slate-400">
+                    <li class="flex items-start">
+                      <span class="text-orange-400 dark:text-orange-500 mr-3 mt-1 flex-shrink-0">•</span>
+                      <span><strong>Custom Data Structures from Scratch:</strong> Implemented generic collections without standard library wrappers, including a dynamically resizing hash map with collision chaining (0.75 load factor threshold for average O(1) retrieval), a self-balancing AVL tree, and a singly linked list.</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-orange-400 dark:text-orange-500 mr-3 mt-1 flex-shrink-0">•</span>
+                      <span><strong>Algorithmic Optimisation:</strong> Engineered a generic Quicksort using Lomuto partitioning and a median-of-three pivot selection to secure reliable O(n log n) sorting performance and prevent worst-case degeneration.</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-orange-400 dark:text-orange-500 mr-3 mt-1 flex-shrink-0">•</span>
+                      <span><strong>Fast Range &amp; Filter Queries:</strong> Leveraged strictly balanced AVL trees (height deviance &plusmn;1) to power complex range queries (e.g. filtering films by release period) in O(log n + k) time.</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-orange-400 dark:text-orange-500 mr-3 mt-1 flex-shrink-0">•</span>
+                      <span><strong>Multi-Indexed Database Engine:</strong> Structured unified indices across Movies, Cast/Crew Credits, and User Ratings, combining tree and hash lookups to support instant cross-referencing by title, credit IDs, keywords, and average ratings.</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-orange-400 dark:text-orange-500 mr-3 mt-1 flex-shrink-0">•</span>
+                      <span><strong>Benchmark Performance:</strong> Consistently recorded sub-millisecond query execution on a 1,000-movie collection (top average-rated query in 0.0475ms; date range filter in 0.0168ms).</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="flex flex-wrap gap-2 pt-1">
+                  <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Java</span>
+                  <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">AVL Trees</span>
+                  <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Hash Maps</span>
+                  <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Quicksort</span>
+                  <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Data Structures</span>
+                </div>
+              </div>
+            </div>
+          </details>
+
+
+          <!-- Card 5: Robot Maze Solver -->
+          <details class="experience-card group bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
+            <summary class="flex items-start justify-between p-6 sm:p-8 cursor-pointer select-none">
+              <div class="flex-1 min-w-0 pr-4">
+                <div class="flex items-center gap-3 mb-2 flex-wrap">
+                  <h3 class="text-slate-900 dark:text-slate-50">Autonomous Maze-Solving Robot</h3>
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 border border-orange-200 dark:border-orange-800">Java Coursework</span>
+                </div>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed max-w-prose">
+                  An intelligent autonomous maze-navigation controller featuring junction discovery, stateful backtracking, loop elimination, and optimal route replay.
+                </p>
+              </div>
+              <div class="flex flex-col items-end flex-shrink-0 gap-3">
+                <div class="flex items-center gap-2" onclick="event.stopPropagation();">
+                  <a href="https://github.com/szymonator/RobotMaze" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg text-slate-400 dark:text-slate-500 hover:text-orange-500 dark:hover:text-orange-400 hover:bg-orange-50 dark:hover:bg-orange-900/20 transition-colors" aria-label="View on GitHub" title="View on GitHub">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                  </a>
+                </div>
+                <div class="flex items-center text-sm text-orange-600 dark:text-orange-400">
+                  <span class="toggle-text">Show more</span>
+                  <svg class="chevron-icon w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                </div>
+              </div>
+            </summary>
+            <div class="details-content">
+              <div class="px-6 sm:px-8 pb-6 pt-0">
+                <div class="border-t border-slate-100 dark:border-slate-700/80 pt-4 mb-5">
+                  <h4 class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3">Technical Highlights</h4>
+                  <ul class="space-y-2.5 text-sm text-slate-600 dark:text-slate-400">
+                    <li class="flex items-start">
+                      <span class="text-orange-400 dark:text-orange-500 mr-3 mt-1 flex-shrink-0">•</span>
+                      <span><strong>Stateful Exploration &amp; Tremaux-Style Backtracking:</strong> Built a finite-state controller that dynamically transitions between forward exploration and dead-end backtracking, maintaining junction visit frequencies to systematically solve unknown topologies.</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-orange-400 dark:text-orange-500 mr-3 mt-1 flex-shrink-0">•</span>
+                      <span><strong>Historical Junction Stack &amp; Loop Pruning:</strong> Designed custom data structures tracking coordinate history and heading vectors. When dead-ends or cyclic paths are detected, suboptimal branches are pruned from memory.</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-orange-400 dark:text-orange-500 mr-3 mt-1 flex-shrink-0">•</span>
+                      <span><strong>Optimal Route Execution:</strong> After mapping the maze on the initial discovery run, subsequent runs switch into optimal replay mode, guiding the robot to the exit with zero detours or redundant junction evaluations.</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-orange-400 dark:text-orange-500 mr-3 mt-1 flex-shrink-0">•</span>
+                      <span><strong>Robust Collision &amp; Corner Handling:</strong> Implemented lookahead checks for walls, passages, corridors, and cul-de-sacs to ensure collision-free steering under simulated sensor inputs.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="flex flex-wrap gap-2 pt-1">
+                  <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Java</span>
+                  <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Pathfinding</span>
+                  <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Search Algorithms</span>
+                  <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Robotics Logic</span>
+                </div>
+              </div>
+            </div>
+          </details>
+
+
           <!-- Card 6: E-Commerce Authenticity Detector -->
           <details class="experience-card group bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
             <summary class="flex items-start justify-between p-6 sm:p-8 cursor-pointer select-none">
@@ -574,71 +579,8 @@
             </div>
           </details>
 
-          <!-- Card 7: Kepler Satellite Planet Analysis -->
-          <details class="experience-card group bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
-            <summary class="flex items-start justify-between p-6 sm:p-8 cursor-pointer select-none">
-              <div class="flex-1 min-w-0 pr-4">
-                <div class="flex items-center gap-3 mb-2 flex-wrap">
-                  <h3 class="text-slate-900 dark:text-slate-50">Kepler Satellite Exoplanet Analysis</h3>
-                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 border border-orange-200 dark:border-orange-800">Astrophysics Data Science</span>
-                </div>
-                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed max-w-prose">
-                  Data science toolkit analysing NASA Kepler satellite stellar observations to detect transit signals, calculate orbital parameters, and evaluate exoplanet habitability.
-                </p>
-                <p class="mt-2 text-xs text-slate-500 dark:text-slate-400">
-                  <span class="font-medium text-slate-600 dark:text-slate-300">Note:</span> Team repository; my contributions were developed on the linked <code class="font-mono text-orange-600 dark:text-orange-400 text-xs">szymon</code> branch.
-                </p>
-              </div>
-              <div class="flex flex-col items-end flex-shrink-0 gap-3">
-                <div class="flex items-center gap-2" onclick="event.stopPropagation();">
-                  <a href="https://github.com/mw-xyz/Planet-Hunting-local/tree/szymon" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg text-slate-400 dark:text-slate-500 hover:text-orange-500 dark:hover:text-orange-400 hover:bg-orange-50 dark:hover:bg-orange-900/20 transition-colors" aria-label="View on GitHub" title="View on GitHub (szymon branch)">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                  </a>
-                </div>
-                <div class="flex items-center text-sm text-orange-600 dark:text-orange-400">
-                  <span class="toggle-text">Show more</span>
-                  <svg class="chevron-icon w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-                </div>
-              </div>
-            </summary>
-            <div class="details-content">
-              <div class="px-6 sm:px-8 pb-6 pt-0">
-                <div class="border-t border-slate-100 dark:border-slate-700/80 pt-4 mb-5">
-                  <h4 class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3">Technical Highlights</h4>
-                  <ul class="space-y-2.5 text-sm text-slate-600 dark:text-slate-400">
-                    <li class="flex items-start">
-                      <span class="text-orange-400 dark:text-orange-500 mr-3 mt-1 flex-shrink-0">•</span>
-                      <span><strong>Stellar Big-Data Analysis:</strong> Worked in a research team to process and clean astronomical photometric time-series data captured by NASA's Kepler space observatory.</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-orange-400 dark:text-orange-500 mr-3 mt-1 flex-shrink-0">•</span>
-                      <span><strong>Transit Detection &amp; Statistical Modeling:</strong> Co-developed a Python analysis tool using NumPy to process flux dips across stellar light curves, estimating orbital periods, radii, and habitability metrics for Earth-like candidates.</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-orange-400 dark:text-orange-500 mr-3 mt-1 flex-shrink-0">•</span>
-                      <span><strong>Scientific Visualisation:</strong> Utilised Matplotlib to generate transit light curves, stellar classification charts, and habitable-zone boundary diagrams.</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-orange-400 dark:text-orange-500 mr-3 mt-1 flex-shrink-0">•</span>
-                      <span><strong>Conference Presentation (CosmicCon):</strong> Selected to present findings and methodologies to an audience of over 100 researchers, academics, and students at Queen Mary University of London.</span>
-                    </li>
-                  </ul>
-                </div>
 
-                <div class="flex flex-wrap gap-2 pt-1">
-                  <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Python</span>
-                  <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">NumPy</span>
-                  <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Matplotlib</span>
-                  <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Data Science</span>
-                  <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Scientific Computing</span>
-                </div>
-              </div>
-            </div>
-          </details>
-
-          <!-- Card 8: GPQueue NEA -->
+          <!-- Card 7: GPQueue NEA -->
           <details class="experience-card group bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
             <summary class="flex items-start justify-between p-6 sm:p-8 cursor-pointer select-none">
               <div class="flex-1 min-w-0 pr-4">
@@ -734,6 +676,71 @@
                   <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Priority Queues</span>
                   <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Cron</span>
                   <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">REST API</span>
+                </div>
+              </div>
+            </div>
+          </details>
+
+
+          <!-- Card 8: Kepler Satellite Planet Analysis -->
+          <details class="experience-card group bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
+            <summary class="flex items-start justify-between p-6 sm:p-8 cursor-pointer select-none">
+              <div class="flex-1 min-w-0 pr-4">
+                <div class="flex items-center gap-3 mb-2 flex-wrap">
+                  <h3 class="text-slate-900 dark:text-slate-50">Kepler Satellite Exoplanet Analysis</h3>
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 border border-orange-200 dark:border-orange-800">Astrophysics Data Science</span>
+                </div>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed max-w-prose">
+                  Data science toolkit analysing NASA Kepler satellite stellar observations to detect transit signals, calculate orbital parameters, and evaluate exoplanet habitability.
+                </p>
+                <p class="mt-2 text-xs text-slate-500 dark:text-slate-400">
+                  <span class="font-medium text-slate-600 dark:text-slate-300">Note:</span> Team repository; my contributions were developed on the linked <code class="font-mono text-orange-600 dark:text-orange-400 text-xs">szymon</code> branch.
+                </p>
+              </div>
+              <div class="flex flex-col items-end flex-shrink-0 gap-3">
+                <div class="flex items-center gap-2" onclick="event.stopPropagation();">
+                  <a href="https://github.com/mw-xyz/Planet-Hunting-local/tree/szymon" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg text-slate-400 dark:text-slate-500 hover:text-orange-500 dark:hover:text-orange-400 hover:bg-orange-50 dark:hover:bg-orange-900/20 transition-colors" aria-label="View on GitHub" title="View on GitHub (szymon branch)">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                  </a>
+                </div>
+                <div class="flex items-center text-sm text-orange-600 dark:text-orange-400">
+                  <span class="toggle-text">Show more</span>
+                  <svg class="chevron-icon w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                </div>
+              </div>
+            </summary>
+            <div class="details-content">
+              <div class="px-6 sm:px-8 pb-6 pt-0">
+                <div class="border-t border-slate-100 dark:border-slate-700/80 pt-4 mb-5">
+                  <h4 class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3">Technical Highlights</h4>
+                  <ul class="space-y-2.5 text-sm text-slate-600 dark:text-slate-400">
+                    <li class="flex items-start">
+                      <span class="text-orange-400 dark:text-orange-500 mr-3 mt-1 flex-shrink-0">•</span>
+                      <span><strong>Stellar Big-Data Analysis:</strong> Worked in a research team to process and clean astronomical photometric time-series data captured by NASA's Kepler space observatory.</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-orange-400 dark:text-orange-500 mr-3 mt-1 flex-shrink-0">•</span>
+                      <span><strong>Transit Detection &amp; Statistical Modeling:</strong> Co-developed a Python analysis tool using NumPy to process flux dips across stellar light curves, estimating orbital periods, radii, and habitability metrics for Earth-like candidates.</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-orange-400 dark:text-orange-500 mr-3 mt-1 flex-shrink-0">•</span>
+                      <span><strong>Scientific Visualisation:</strong> Utilised Matplotlib to generate transit light curves, stellar classification charts, and habitable-zone boundary diagrams.</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-orange-400 dark:text-orange-500 mr-3 mt-1 flex-shrink-0">•</span>
+                      <span><strong>Conference Presentation (CosmicCon):</strong> Selected to present findings and methodologies to an audience of over 100 researchers, academics, and students at Queen Mary University of London.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="flex flex-wrap gap-2 pt-1">
+                  <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Python</span>
+                  <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">NumPy</span>
+                  <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Matplotlib</span>
+                  <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Data Science</span>
+                  <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Scientific Computing</span>
                 </div>
               </div>
             </div>
