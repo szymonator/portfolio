@@ -1,3 +1,4 @@
 *.txt
-*.jpeg
-*.png
+tailwindcss
+update_head.py
+node_modules/

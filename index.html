@@ -6,21 +6,13 @@
   <title>Szymon Galutowski — Portfolio</title>
   <meta name="description" content="Portfolio of Szymon Galutowski — Computer Science student, researcher, and builder.">
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            display: ['DM Serif Display', 'Georgia', 'serif'],
-            body: ['Inter', 'system-ui', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
+  <!-- Google Fonts (preconnect for speed) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS (compiled) -->
+  <link rel="stylesheet" href="css/tailwind.css">
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="css/styles.css">
@@ -99,7 +91,7 @@
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col items-center text-center">
           <!-- Avatar -->
-          <img src="szymon_galutowski.jpeg" alt="Szymon Galutowski" class="w-32 h-32 rounded-full object-cover mb-8 ring-4 ring-orange-200 dark:ring-orange-800/50 shadow-lg">
+          <img src="szymon_galutowski.jpeg" alt="Szymon Galutowski" width="128" height="128" fetchpriority="high" decoding="async" class="w-32 h-32 rounded-full object-cover mb-8 ring-4 ring-orange-200 dark:ring-orange-800/50 shadow-lg">
 
           <!-- Name -->
           <h1 class="text-slate-900 dark:text-slate-50 mb-4">

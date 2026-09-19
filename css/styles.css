@@ -3,10 +3,8 @@
    =========================== */
 
 /* ---------- Font Faces ---------- */
-/* Using Google Fonts CDN for simplicity during development.
-   For production, self-host WOFF2 files for GDPR compliance. */
+/* Fonts loaded via <link> tags in <head> for faster discovery by browser preload scanner. */
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap');
 
 /* ---------- Custom Properties ---------- */
 :root {
@@ -22,6 +20,11 @@
 
   /* Smooth expand/collapse for <details> */
   interpolate-size: allow-keywords;
+}
+
+/* Aspect ratio helper */
+.aspect-video {
+  aspect-ratio: 16 / 9;
 }
 
 /* ---------- Base Styles ---------- */
