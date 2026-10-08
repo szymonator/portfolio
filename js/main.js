@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileNav();
   initActiveNavLink();
   initCollapsibleCards();
+  initCourseworkRepoLinks();
 });
 
 /* ---------- Theme Storage Helpers ---------- */
@@ -128,3 +129,82 @@ function initCollapsibleCards() {
     }
   });
 }
+
+/* ---------- Coursework Private Repo Notice ---------- */
+function initCourseworkRepoLinks() {
+  document.querySelectorAll('.coursework-repo-link, .coursework-repo-btn').forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const project = el.getAttribute('data-project') || 'Coursework';
+      showRepoNotice(project);
+    });
+  });
+
+  // Close toast on ESC key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      const toast = document.getElementById('repo-notice-toast');
+      if (toast) toast.remove();
+    }
+  });
+}
+
+function showRepoNotice(projectName) {
+  const existing = document.getElementById('repo-notice-toast');
+  if (existing) existing.remove();
+
+  const toast = document.createElement('div');
+  toast.id = 'repo-notice-toast';
+  toast.className = 'fixed bottom-5 inset-x-4 sm:inset-x-auto sm:right-5 z-50 max-w-sm sm:max-w-md mx-auto sm:mx-0 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-2xl rounded-xl p-4 transition-all duration-200';
+  toast.setAttribute('role', 'alert');
+  toast.setAttribute('aria-live', 'assertive');
+
+  toast.innerHTML = `
+    <div class="flex items-start gap-3">
+      <div class="flex-shrink-0 w-9 h-9 rounded-lg bg-orange-100 dark:bg-orange-950 flex items-center justify-center text-orange-600 dark:text-orange-400 mt-0.5">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+        </svg>
+      </div>
+      <div class="flex-1 min-w-0 pr-1">
+        <div class="flex items-center justify-between mb-1">
+          <h4 class="text-sm font-semibold text-slate-900 dark:text-slate-100">Private Coursework Repository</h4>
+          <button type="button" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-1 -mr-1 rounded-md transition-colors" aria-label="Close notification" onclick="document.getElementById('repo-notice-toast')?.remove()">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-3">
+          This repository is private in line with university academic policies. Access can be granted case-by-case upon request.
+        </p>
+        <div class="flex items-center gap-3">
+          <a href="mailto:s.galutowski@gmail.com?subject=Repository%20Access%20Request%20-%20${encodeURIComponent(projectName || 'Coursework')}" class="inline-flex items-center gap-1.5 text-xs font-medium text-orange-600 dark:text-orange-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <span>Request Access via Email</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(toast);
+
+  const timer = setTimeout(() => {
+    if (toast.parentNode) {
+      toast.style.opacity = '0';
+      setTimeout(() => toast.remove(), 250);
+    }
+  }, 6000);
+
+  toast.querySelector('button')?.addEventListener('click', () => {
+    clearTimeout(timer);
+    toast.remove();
+  });
+}
+
+// Expose globally to window
+window.showRepoNotice = showRepoNotice;
