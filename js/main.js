@@ -132,11 +132,11 @@ function initCollapsibleCards() {
 
 /* ---------- Coursework Private Repo Notice ---------- */
 function initCourseworkRepoLinks() {
-  document.querySelectorAll('.coursework-repo-link').forEach(link => {
-    link.addEventListener('click', (e) => {
+  document.querySelectorAll('.coursework-repo-link, .coursework-repo-btn').forEach(el => {
+    el.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
-      const project = link.getAttribute('data-project') || 'Coursework';
+      const project = el.getAttribute('data-project') || 'Coursework';
       showRepoNotice(project);
     });
   });
@@ -156,7 +156,7 @@ function showRepoNotice(projectName) {
 
   const toast = document.createElement('div');
   toast.id = 'repo-notice-toast';
-  toast.className = 'fixed bottom-5 inset-x-4 sm:inset-x-auto sm:right-5 z-50 max-w-sm sm:max-w-md mx-auto sm:mx-0 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xl rounded-xl p-4 transition-all duration-300 transform translate-y-4 opacity-0';
+  toast.className = 'fixed bottom-5 inset-x-4 sm:inset-x-auto sm:right-5 z-50 max-w-sm sm:max-w-md mx-auto sm:mx-0 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-2xl rounded-xl p-4 transition-all duration-200';
   toast.setAttribute('role', 'alert');
   toast.setAttribute('aria-live', 'assertive');
 
@@ -180,7 +180,7 @@ function showRepoNotice(projectName) {
           This repository is private in line with university academic policies. Access can be granted case-by-case upon request.
         </p>
         <div class="flex items-center gap-3">
-          <a href="mailto:s.galutowski@gmail.com?subject=Repository%20Access%20Request%20-%20${encodeURIComponent(projectName)}" class="inline-flex items-center gap-1.5 text-xs font-medium text-orange-600 dark:text-orange-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors">
+          <a href="mailto:s.galutowski@gmail.com?subject=Repository%20Access%20Request%20-%20${encodeURIComponent(projectName || 'Coursework')}" class="inline-flex items-center gap-1.5 text-xs font-medium text-orange-600 dark:text-orange-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors">
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
             </svg>
@@ -193,18 +193,18 @@ function showRepoNotice(projectName) {
 
   document.body.appendChild(toast);
 
-  requestAnimationFrame(() => {
-    toast.classList.remove('translate-y-4', 'opacity-0');
-    toast.classList.add('translate-y-0', 'opacity-100');
-  });
-
   const timer = setTimeout(() => {
     if (toast.parentNode) {
-      toast.classList.remove('translate-y-0', 'opacity-100');
-      toast.classList.add('translate-y-4', 'opacity-0');
-      setTimeout(() => toast.remove(), 300);
+      toast.style.opacity = '0';
+      setTimeout(() => toast.remove(), 250);
     }
   }, 6000);
 
-  toast.querySelector('button')?.addEventListener('click', () => clearTimeout(timer));
+  toast.querySelector('button')?.addEventListener('click', () => {
+    clearTimeout(timer);
+    toast.remove();
+  });
 }
+
+// Expose globally to window
+window.showRepoNotice = showRepoNotice;
